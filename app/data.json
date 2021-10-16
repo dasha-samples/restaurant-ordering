@@ -1,0 +1,656 @@
+{
+  "version": "v2",
+  "intents": 
+  {
+    "yes": 
+    {
+      "includes": 
+      [
+        "yes",
+        "yes please",
+        "yes I would",
+        "correct",
+        "sure",
+        "right",
+        "yep",
+        "I would",
+        "yeah",
+        "that's right", 
+        "I do"
+      ]
+    },
+
+    "no": 
+    {
+      "includes": 
+      [
+        "no",
+        "definitely not",
+        "wrong",
+        "incorrect",
+        "I do not",
+        "I will not",
+        "no that's it thank you",
+        "I would not",
+        "I wouldn't"
+      ]
+    },
+
+    "takeout": 
+    {
+      "includes": 
+      [
+        "pick-up",
+        "I'd like to pick it up please ",
+        "takeout please ",
+        "carry out", 
+        "pick up ",
+        "pickup",
+        "I want to order take out"
+      ]
+    },
+    "delivery": {
+      "includes": [
+        "delivery",        
+        "delivered",
+        "delivered please",
+        "Do you deliver",
+        "Delivery please",
+        "I'd like it delivered"
+      ]
+    },
+    "catering": {
+      "includes": [
+        "catering",
+        "catering please",
+        "cater",
+        "I want to order catering",
+        "I want to cater an event",
+        "yes, I'd like to place an order for catering",
+        "I'm interested in catering"
+      ]
+    },
+    "new_seasonal": {
+      "includes": [
+        "What are the new and seasonal offerings",
+        "new and seasonal",
+        "What about the seasonal offers? ",
+        "do tell me about the seasonal offers",
+        "what is new and seasonal",
+        "I'd love to hear about the new and seasonal",
+        "tell me about the offers",
+        "tell me about it",
+        "I'd love to hear about those offers",
+        "yes, I'd like to hear about those"
+      ]
+    },
+    "bundles": {
+      "includes": [
+        "What are the new and seasonal offerings",
+        "new and seasonal",
+        "What about the seasonal offers? ",
+        "do tell me about the seasonal offers",
+        "what is new and seasonal",
+        "I'd love to hear about the bundles",
+        "tell me about the offers",
+        "tell me about it",
+        "I'd love to hear about those offers",
+        "yes, I'd like to hear about those"
+      ]
+    },
+    "toasted_steak": {
+      "includes": [
+        "What is the toasted steak?",
+        "toasted steak?",
+        "what's that steak sandwich?",
+        "steak sandwich?"
+      ]
+    },
+    "curbside": {
+      "includes": [
+        "curbside",
+        "curb",
+        "I'll do curbside",
+        "I'll pick it up curbside",
+        "curbside is fine"
+      ]
+    },
+    "instore": {
+      "includes": [
+        "in store",
+        "I'll do in the cafe",
+        "In the cafe is fine",
+        "in the cafe",
+        "I'll do in store"
+      ]
+    },
+    "nevermind": 
+    {
+      "includes": 
+      [
+        "nevermind",
+        "forget about it"
+      ]
+    },
+
+
+    "bye": {
+      "includes": [
+        "bye",
+        "good bye",
+        "thanks bye",
+        "we're done",
+        "take it easy"
+      ]
+    }
+  },
+ 
+  "entities": {
+    "first_name": 
+    {
+      "open_set": true,
+      "values": 
+      [
+        {
+          "value": "John"
+        },
+        {
+          "value": "Bridgette"
+        },
+        {
+          "value": "James"
+        },
+        {
+          "value": "Sarah"
+        },
+        {
+          "value": "Jermaine"
+        },
+        {
+          "value": "Roseanne"
+        },
+        {
+          "value": "Ahmed"
+        },
+        {
+          "value": "Tony"
+        },
+        {
+          "value": "Jon"
+        }
+      ],
+      "includes": []
+    },
+    "last_name": 
+    {
+      "open_set": true,
+      "values": 
+      [
+        {
+          "value": "Dupri"
+        },
+        {
+          "value": "Thompson"
+        },
+        {
+          "value": "Snow"
+        },
+        {
+          "value": "Montana"
+        },
+        {
+          "value": "Bond"
+        },
+        {
+          "value": "Patel"
+        },
+        {
+          "value": "Holden"
+        }
+      ],
+      "includes": 
+      [
+        "This is (James)[first_name] (Holden)[last_name]",
+        "I'm (Jon)[first_name] (Snow)[last_name]",
+        "My name is (Ahmed)[first_name] (Snow)[last_name]",
+        "(Jermaine)[first_name] (Dupri)[last_name]",
+        "Hi there, my name is (Bridgette)[first_name] (Patel)[last_name]",
+        "Hi there, I'm (Ahmed)[first_name] (Montana)[last_name]",
+        "The name is (Holden)[last_name], (James)[first_name], (Holden)[last_name]",
+        "(Bond)[last_name], (James)[first_name], (Bond)[last_name]"
+      ]
+    },
+
+    "address": 
+    {
+      "open_set": true,
+      "values": 
+      [
+        {
+          "value": "1919 Tower Lane"
+        },
+        {
+          "value": "444 Main street"
+        },
+        {
+          "value": "1243 main street, apartment 7"
+        },
+        {
+          "value": "999 Elm road, apartment 2"
+        },
+        {
+          "value": "19 Rose street, office f"
+        },
+        {
+          "value": "75 green lane"
+        },
+        {
+          "value": "6632 Rosemary lane "
+        }
+      ],
+      "includes": 
+      [
+        "My address is (19 Rose street, office f)[address]",
+        "Please deliver to (444 Main street)[address]",
+        "I'll take delivery at (1919 Tower Lane)[address]",
+        "You can deliver to (999 Elm road, apartment 2)[address]",
+        "I'll be at (1243 main street, apartment 7)[address]"
+      ]
+    },
+
+    "time": 
+    {
+      "open_set": false,
+      "values": 
+      [
+        {
+          "value": "6 am",
+          "synonyms": 
+          [
+            "6 am",
+            "6:00 AM",
+            "6 o'clock",
+            "six o'clock",
+            "at six o'clock"
+          ]
+        },
+        {
+          "value": "7 am",
+          "synonyms": [
+
+            "at 7 am",
+            "7:00 AM",
+            "seven am ",
+            "7 o'clock",
+            "seven o'clock"
+          ]
+        },
+        {
+          "value": "8 am",
+          "synonyms": [
+            "8 am",
+            "8:00 AM",
+            "eight am",
+            "at 8 am",
+            "eight o'clock",
+            "8 o'clock"
+          ]
+        },
+        {
+          "value": "9 am",
+          "synonyms": [
+            "9 am",
+            "9:00 AM",
+            "9 o'clock",
+            "nine o'clock",
+            "nine am"
+          ]
+        },
+        {
+          "value": "10 am",
+          "synonyms": [
+            "10 am",
+            "10:00 AM",
+            "ten o'clock ",
+            "10 o'clock"
+          ]
+        },
+        {
+          "value": "11 am",
+          "synonyms": [
+            "11 am",
+            "11:00 AM",
+            "eleven am",
+            "eleven o'clock"
+          ]
+        },
+        {
+          "value": "12 pm",
+          "synonyms": [
+            "12 pm",
+            "12:00 PM",
+            "at 12 pm",
+            "twelve pm",
+            "twelve o'clock"          ]
+        },
+        {
+          "value": "1 pm",
+          "synonyms": [
+            "1 pm",
+            "1:00 PM",
+            "at 1 pm",
+            "one pm",
+            "one o'clock"
+          ]
+        },
+        {
+          "value": "2 pm",
+          "synonyms": [
+            "2 pm",
+            "2:00 PM",
+            "at 2 pm",
+            "two pm",
+            "two o'clock",
+            "2 o'clock"
+          ]
+        },
+        {
+          "value": "3 pm",
+          "synonyms": [
+            "3 pm",
+            "3:00 PM",
+            "at 3 pm",
+            "three pm",
+            "three o'clock",
+            "3 o'clock"
+          ]
+        },
+        {
+          "value": "4 pm",
+          "synonyms": [
+            "4 pm",
+            "4:00 PM",
+            "at 4 pm",
+            "four pm",
+            "four o'clock",
+            "4 o'clock"
+          ]
+        }
+      ],
+      "includes": [
+        "I'd like to pick up the order at (9 am)[time]",
+        "Can I pick it up at (10 am)[time]",
+        "I'll pick it up at (11 am)[time]",
+        "I want to pick it up at (11 am)[time]",
+        "Pleae deliver at (11 am)[time]",
+        "I want the food at (1 pm)[time]",
+        "I want it delivered at (1 pm)[time]",
+        "at (1 pm)[time]",
+        "I'd like it at (11 am)[time]",
+        "(7 am)[time]",
+        "(7 am)[time] please"
+      ]
+    },
+
+    "order": 
+    {
+      "open_set": false,
+      "values": [
+        {
+          "value": "Toasted Steak and White Cheddar Sandwich",
+          "synonyms": ["Toasted Steak and White Cheddar Sandwich", "the steak sandwich", "the seasonal steak sandwich", "toasted steak"]
+        },
+        {
+          "value": "Turkey Chili",
+          "synonyms": ["Turkey Chili"]
+        },
+        {
+          "value": "Vegetarian Autumn Squash Soup",
+          "synonyms": ["Autumn Squash Soup", "Squash soup"]
+        },
+        {
+          "value": "Cinnamon Crunch Bagel",
+          "synonyms": ["Cinnamon Crunch Bagel", "Cinnamon bagel"]
+        },
+        {
+          "value": "Chipotle Chicken Avocado Melt",
+          "synonyms": ["Chipotle chicken", "Chipotle chicken avocado melt"]
+        },
+        {
+          "value": "Classic Grilled Cheese",
+          "synonyms": ["Classic grilled cheese", "grilled cheese"]
+        },
+        {
+          "value": "Pepperoni Flatbread Pizza",
+          "synonyms": ["Pepperoni Flatbread Pizza", "Pepperoni Pizza"]
+        },
+        {
+          "value": "Seasonal Salads and Sandwiches Bundle With Cold Drink Totes",
+          "synonyms": ["Seasonal salads and sandwiches bundle with drinks", "Seasonal salads and sandwiches", "salads and sandwiches"]
+        },
+        {
+          "value": "Morning Fruit & Pastry Platters with cold drink totes",
+          "synonyms": ["Morning Fruit & Pastry Platters with drinks", "Morning Fruit and Pastry Platters", "fruit platter"]
+        } ,
+        {
+          "value": "Boxed Salads With Cold Drink Totes",
+          "synonyms": ["boxed salads with drinks", "the salads"]
+        },
+        {
+          "value": "Hazelnut Coffee",
+          "synonyms": ["Hazelnut coffee"]
+        },
+        {
+          "value": "Cinnamon Crunch latte",
+          "synonyms": ["Cinnamon Crunch latte"]
+        }, 
+        {
+          "value": "Green Passion Smoothie",
+          "synonyms": ["Green passion smoothie"]
+        }
+      ],
+      "includes": [
+        "(Cinnamon Crunch Bagel)[order], (Green Passion Smoothie)[order] and (Chipotle Chicken Avocado Melt)[order]",
+        "(Turkey Chili)[order], (Cinnamon Crunch Bagel)[order] and (Hazelnut Coffee)[order]",
+        "I'd like (Toasted Steak and White Cheddar Sandwich)[order], (Vegetarian Autumn Squash Soup)[order] and a (Cinnamon Crunch latte)[order]",
+        "I want (Boxed Salads With Cold Drink Totes)[order]",
+        "I'd like the (Seasonal Salads and Sandwiches Bundle With Cold Drink Totes)[order]", 
+        "(Seasonal Salads and Sandwiches Bundle With Cold Drink Totes)[order] please"
+      ]
+    },
+
+    "people": 
+    {
+      "open_set": false,
+      "values": 
+      [
+        {
+          "value": "13",
+          "synonyms": 
+          [
+            "13",
+            "thirteen"
+          ]
+        },
+        {
+          "value": "14",
+          "synonyms": 
+          [
+            "14",
+            "fourteen"
+          ]
+        },
+        {
+          "value": "15",
+          "synonyms": 
+          [
+            "15",
+            "fifteen"
+          ]
+        },
+        {
+          "value": "16",
+          "synonyms": 
+          [
+            "16",
+            "sixteen"
+          ]
+        },
+        {
+          "value": "17",
+          "synonyms": 
+          [
+            "17",
+            "seventeen"
+          ]
+        },
+        {
+          "value": "18",
+          "synonyms": 
+          [
+            "18",
+            "eighteen"
+          ]
+        },
+        {
+          "value": "19",
+          "synonyms": 
+          [
+            "19",
+            "nineteen"
+          ]
+        },
+        {
+          "value": "20",
+          "synonyms": 
+          [
+            "20",
+            "twenty"
+          ]
+        }
+      ],
+      "includes": [
+        "there will be (13)[people]",
+        "it's a party of (20)[people]",
+        "I need food for (19)[people]",
+        "I require delicious sandwiches for (17)[people]",
+        "There will be (15)[people] of us",
+        "(13)[people]"
+      ]
+    },
+
+
+    "rating": 
+    {
+      "open_set": false,
+      "values": 
+      [
+        {
+          "value": "0",
+          "synonyms": 
+          [
+            "0",
+            "zero",
+            "horrible",
+            "worst ever"
+          ]
+        },
+        {
+          "value": "1",
+          "synonyms": [
+            "1",
+            "one",
+            "very bad"
+          ]
+        },
+        {
+          "value": "2",
+          "synonyms": [
+            "2",
+            "two",
+            "bad"
+          ]
+        },
+        {
+          "value": "3",
+          "synonyms": [
+            "3",
+            "three",
+            "not good"
+          ]
+        },
+        {
+          "value": "4",
+          "synonyms": [
+            "4",
+            "four",
+            "inadequate"
+          ]
+        },
+        {
+          "value": "5",
+          "synonyms": [
+            "5",
+            "five",
+            "bearable"
+          ]
+        },
+        {
+          "value": "6",
+          "synonyms": [
+            "6",
+            "six",
+            "average"
+          ]
+        },
+        {
+          "value": "7",
+          "synonyms": [
+            "7",
+            "seven",
+            "pretty good",
+            "okay"
+          ]
+        },
+        {
+          "value": "8",
+          "synonyms": [
+            "8",
+            "eight",
+            "good"
+          ]
+        },
+        {
+          "value": "9",
+          "synonyms": [
+            "9",
+            "nine",
+            "very good"
+          ]
+        },
+        {
+          "value": "10",
+          "synonyms": [
+            "10",
+            "ten",
+            "amazing",
+            "incrdible",
+            "perfect",
+            "awesome"
+          ]
+        }
+      ],
+      "includes": [
+        "I would give it a (4)[rating]",
+        "(4)[rating]",
+        "(10)[rating]",
+        "I'll give you a (6)[rating]",
+        "(0)[rating]",
+        "(10)[rating]"
+      ]
+    }
+    
+  }
+
+
+}

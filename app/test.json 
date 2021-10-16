@@ -1,0 +1,94 @@
+{
+  "version": "v2",
+  "intents": 
+  {
+    "yes": 
+    {
+      "includes": 
+      [
+        "yes",
+        "yes please",
+        "yes I would",
+        "correct",
+        "sure",
+        "right",
+        "yep",
+        "I would",
+        "yeah",
+        "that's right", 
+        "I do"
+      ]
+    },
+
+    "no": 
+    {
+      "includes": 
+      [
+
+      ]
+    },
+
+    "takeout": 
+    {
+      "includes": 
+      [
+        "pick-up",
+        "I'd like to pick it up please ",
+        "takeout please ",
+        "carry out", 
+        "pick up ",
+        "pickup",
+        "I want to order take out"
+      ]
+    },
+    "delivery": {
+      "includes": [
+
+      ]
+    },
+    "catering": {
+      "includes": [
+
+      ]
+    },
+    "new_seasonal": {
+      "includes": [
+
+      ]
+    },
+    "bundles": {
+      "includes": [
+
+      ]
+    },
+    "toasted_steak": {
+      "includes": [
+ 
+      ]
+    },
+    "curbside": {
+      "includes": [
+
+      ]
+    },
+    "instore": {
+      "includes": [
+
+      ]
+    },
+    "nevermind": 
+    {
+      "includes": 
+      [
+
+      ]
+    },
+
+    "bye": {
+      "includes": [
+      ]
+    }
+  }  
+
+
+}
